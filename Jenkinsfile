@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-                sh "git clone https://github.com/andra2608/JenKinsTask.git"
+                echo 'Building'
             }
         }
 
@@ -14,5 +14,12 @@ pipeline {
                 // Your test steps go here
             }
         }
+        stage('clone'){
+            steps{
+                git branch:'develop' url: 'https://github.com/andra2608/JenKinsTask.git'
+
+                dir('E:\GIT\git_practice'){
+                    script {
+                        bat 'git config --global --add safe.directory E:\GIT\git_practice
     }
 }
