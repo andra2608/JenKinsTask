@@ -2,10 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('clone') {
             steps {
-                echo 'Building...'
-                // Your build steps go here
+                sh "git clone https://github.com/andra2608/JenKinsTask.git"
             }
         }
 
