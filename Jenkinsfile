@@ -10,5 +10,8 @@ pipeline {
                     script {
                         bat 'git config --global --add safe.directory E:\GIT\git_practice'
                         bat 'git pull origin develop'
+                    }
+                }
+            }
     }
 }
